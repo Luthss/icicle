@@ -1,2 +1,7 @@
 */.env
 node_modules/**
+
+# SQLite local databases
+*.db
+*.sqlite
+*.sqlite3
