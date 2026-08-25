@@ -7,7 +7,13 @@ const { data: session } = await authClient.useSession(useFetch);
 		<p>Welcome, {{ session.user.name }}</p>
 		<button @click="authClient.signOut()">Sign out</button>
 	</div>
-	<button v-else @click="authClient.signIn.social({ provider: 'github' })">
-		Continue with GitHub
-	</button>
+	<div v-else>
+		<button @click="authClient.signIn.social({ provider: 'github' })">
+			Continue with GitHub
+		</button>
+		<button @click="authClient.signIn.social({ provider: 'google' })">
+			Continue with Google
+		</button>
+	</div>
+
 </template>
